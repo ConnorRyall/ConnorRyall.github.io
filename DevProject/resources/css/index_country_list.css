@@ -1,0 +1,9 @@
+li {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+body {
+    background-image: url("../images/world_map.jpg");
+}
