@@ -1,49 +1,373 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: #FAF3E0; /* Light beige background */
+    font-family: 'Raleway', sans-serif;
+    color: #2E2E2E; /* Dark charcoal for text */
+}
+
 nav {
     position: fixed;
+    display: inline-block;
     top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     z-index: 1;
-    background-color: white;
-    opacity: 0.75;
+    opacity: 0.9;
+    background-color: #FAF3E0; /* Light beige */
 }
 
 nav li {
     border: 2px solid black;
-    padding: 10px;
-    display: inline-block;
+    padding: 8px;
+    display: inline;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 5px;
+    background-color: #4FC3F7; /* Light blue for nav buttons */
+    box-shadow: 2px 2px;
+    font-size: 18px;
+    color: white; /* White text on buttons */
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
-nav a:hover {
-    color: white;
-}
-
-li:hover {
-    background-color: aqua;
-    color: white;
+nav li:hover {
+    cursor: pointer;
+    background-color: #FF6F61; /* Coral hover effect */
 }
 
 h1 {
     width: 100%;
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    background-color: aqua;
+    background-color: #4FC3F7; /* Light blue background for header */
+    color: white;
+    font-size: 65px;
     margin-top: 80px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    letter-spacing: 3px;
 }
 
-img {
-    width: 700px;
-    height: 500px;
-    margin: auto;
+#text h2 {
+    font-size: 26px;
+    color: #1A374D; /* Dark slate for subheaders */
+}
+
+#text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #2E2E2E; /* Dark charcoal for paragraph text */
+}
+
+#name {
+    font-size: 22px;
+    color: #1A374D; /* Dark slate for name */
+}
+
+#about_me {
     display: block;
-    border: 15px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding: 10px;
+    gap: 20px;
+}
+
+#image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#text {
+    display: block;
+    padding: 5px;
+}
+
+#image img {
+    width: 200px;
+    height: auto;
+    border: 7px solid #2E2E2E; /* Dark charcoal border */
     filter: drop-shadow(5px 5px 5px black);
+    border-radius: 10px;
+}
+
+button {
+    background-color: #00BFA5; /* Aqua for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FF7043; /* Peach hover effect for buttons */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #about_me {
+        flex-direction: column;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+#classes_section {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+
+#classes_section h2 {
+    font-size: 28px;
+    color: #1A374D; /* Dark slate */
+}
+
+#classes_section p {
+    font-size: 18px;
+    color: #2E2E2E; /* Dark charcoal */
+    margin-bottom: 20px;
+}
+
+#classes_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.class_box {
+    flex: 1 1 30%;
+    padding: 20px;
+    background-color: #FAF3E0; /* Light beige */
+    border: 2px solid #2E2E2E; /* Dark charcoal */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
     position: relative;
-    bottom: 35px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.class_box h3 {
+    font-size: 40px; /* Large initial size */
+    color: #1A374D; /* Dark slate for headers */
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+}
+
+.class_detail {
+    display: none;
+    font-size: 16px;
+    color: #2E2E2E; /* Dark charcoal */
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* On hover, make the header smaller, move it to the top, and reveal the details */
+.class_box:hover {
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.class_box:hover h3 {
+    font-size: 25px; /* Make the header smaller */
+    margin-bottom: 10px;
+}
+
+.class_box:hover .class_detail {
+    display: block; /* Reveal the detail text */
+    opacity: 1; /* Animate its appearance */
+}
+
+/* Background color changes on hover */
+#general_english:hover {
+    background-color: #FF7043; /* Peach */
+}
+
+#early_learners:hover {
+    background-color: #FF6F61; /* Coral */
+}
+
+#business_english:hover {
+    background-color: #00BFA5; /* Aqua */
+}
+
+#exam_prep:hover {
+    background-color: #FF7043; /* Peach */
+}
+
+#conversation:hover {
+    background-color: #FF6F61; /* Coral */
+}
+
+#science_math:hover {
+    background-color: #00BFA5; /* Aqua */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #classes_container {
+        flex-direction: column;
+    }
+
+    .class_box {
+        flex: 1 1 100%;
+        height: auto;
+    }
+}
+
+#review_section {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FAF3E0; /* Light beige background to match the rest of the site */
+    border: 2px solid #2E2E2E; /* Dark charcoal border */
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#review_section h2 {
+    font-size: 28px;
+    color: #1A374D; /* Dark slate for section header */
+    margin-bottom: 20px;
+}
+
+#fixed_review {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#main_review_image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #2E2E2E;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollable reviews container */
+#scrollable_reviews {
+    max-height: 400px; /* Limit the height to make it scrollable */
+    overflow-y: scroll;
+    padding-right: 10px;
+    border: 2px solid #2E2E2E; /* Matching dark charcoal border */
+    border-radius: 5px;
+    background-color: #F5F5F5; /* Light background for the review images */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#scrollable_reviews img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add some space between the review images */
+    border: 2px solid #2E2E2E; /* Matching border for consistency */
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Customize the scroll bar for a cleaner look */
+#scrollable_reviews::-webkit-scrollbar {
+    width: 10px;
+}
+
+#scrollable_reviews::-webkit-scrollbar-thumb {
+    background-color: #4FC3F7; /* Light blue scroll bar thumb */
+    border-radius: 10px;
+}
+
+#scrollable_reviews::-webkit-scrollbar-track {
+    background-color: #FAF3E0; /* Light beige for the scroll bar track */
+}
+
+#contact_section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #FAF3E0; /* Light beige background to match the site */
+    border: 2px solid #2E2E2E; /* Dark charcoal border */
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#contact_section h2 {
+    font-size: 28px;
+    color: #1A374D; /* Dark slate for header */
+    margin-bottom: 20px;
+}
+
+#contact_section p {
+    font-size: 18px;
+    color: #2E2E2E; /* Dark charcoal for text */
+    margin-bottom: 30px;
+}
+
+#contact_methods {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between contact methods */
+}
+
+.contact_item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+    background-color: #F5F5F5; /* Light background for contact item */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow around contact items */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.whatsapp_logo {
+    width: 90px;
+    height: auto;
+}
+
+.wechat_logo {
+    width: 50px;
+    height: auto;
+}
+
+.contact_item p {
+    font-size: 18px;
+    color: #2E2E2E; /* Dark charcoal */
+}
+
+.contact_item:hover {
+    background-color: #4FC3F7; /* Light blue hover effect */
+    cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #contact_methods {
+        flex-direction: column;
+        gap: 20px; /* Reduce gap for mobile */
+    }
+
+    .contact_item {
+        justify-content: center;
+    }
 }
