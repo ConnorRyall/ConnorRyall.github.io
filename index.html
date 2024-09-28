@@ -10,25 +10,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800' rel='stylesheet'>
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
         <ul>
-            <li><a href="./country_list.html">Country List</a></li>
-            <li>Bucket List</li>
-            <li>Book List</li>
-            <li>Projects</li>
-            <li>Food</li>
+            <li><a href="#about_me">About Me</a></li>
+            <li><a href="#classes_section">Classes</a></li>
+            <li><a href="#review_section">Reviews</a></li>
+            <li><a href="#contact_section">Contact Me</a></li>
         </ul>
     </nav>
 
-    <h1>Wherever you go, there you are.</h1>
-    
-    <img src="./resources/images/profile_pic.jpg"/>
+    <h1>Classes With Connor</h1>
+    <div id="about_me">
+        <div id="image">
+            <img src="./resources/images/profile2.PNG"/>
+        </div>
+        
+        <div id="text">
+            <h2>About Me</h2>
+                <p id="name">Connor Ryall</p>
+                <p>Hello! I’m Connor Ryall, an English teacher from New York City with over 10 years of teaching experience. I’ve taught more than 3,000 classes to students from around the world. I specialize in making lessons fun, interactive, and tailored to your unique needs—whether you're working on general English, preparing for exams, or practicing conversation.
+                    <br>
+                    <br>In addition to teaching, I’m an adventurer at heart. I love traveling, rock climbing, learning new languages, and reading. I've visited over 45 countries and speak four languages. Meeting new people and learning about different cultures are passions of mine, and I bring that enthusiasm into every lesson.
+                    <br>
+                    <br>I hold degrees in finance and education (with a focus on teaching English as a second language) from universities in New York City and Madrid, Spain. Whether you're a beginner or an advanced learner, I customize each class to help you reach your goals efficiently and enjoyably.</p>
+        </div>
+    </div>
 
-    <h2>About Me</h2>
-        <p>New York born and raised, currently living in Madrid, Spain.<br>
-        Learning how to become a web developer.</p>
+    <div id="classes_section">
+        <h2>Class Types</h2>
+        <p>Students can choose a class type that best suits them. Classes are always customizable and can include more than one type if needed. Prices vary depending on the duration and class type. Classes start at $20 USD for 30 minutes. Please contact me to discuss pricing for your customized needs.
+        </p>
+    
+        <div id="classes_container">
+            <div class="class_box" id="general_english">
+                <h3>General English</h3>
+                <p class="class_detail">Improve all aspects including speaking, reading, listening, writing, grammar, and vocabulary.</p>
+            </div>
+    
+            <div class="class_box" id="early_learners">
+                <h3>Early Learners</h3>
+                <p class="class_detail">Introduction to English including phonics, basic vocabulary, and sentences.</p>
+            </div>
+    
+            <div class="class_box" id="business_english">
+                <h3>Business English</h3>
+                <p class="class_detail">Learn English for professionals, interview preparation, and role-plays.</p>
+            </div>
+    
+            <div class="class_box" id="exam_prep">
+                <h3>Exam Prep</h3>
+                <p class="class_detail">Prepare for Cambridge, Oxford, IELTS, TOEFL, and IET exams.</p>
+            </div>
+    
+            <div class="class_box" id="conversation">
+                <h3>Conversation</h3>
+                <p class="class_detail">Practice conversation and useful phrases. Great for students planning to live in an English-speaking country.</p>
+            </div>
+    
+            <div class="class_box" id="science_math">
+                <h3>Science & Math</h3>
+                <p class="class_detail">Tutoring in math, biology, chemistry, and physics.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="review_section">
+        <h2>What My Students Say</h2>
+    
+        <!-- Fixed Review Image (the first image) -->
+        <div id="fixed_review">
+            <img src="./resources/images/total_review.png" alt="Main review image" id="main_review_image">
+        </div>
+    
+        <!-- Scrollable container for the remaining 9 review images -->
+        <div id="scrollable_reviews">
+            <img src="./resources/images/review1.png" alt="Review 1">
+            <img src="./resources/images/review2.png" alt="Review 2">
+            <img src="./resources/images/review3.png" alt="Review 3">
+            <img src="./resources/images/review4.png" alt="Review 4">
+            <img src="./resources/images/review5.png" alt="Review 5">
+            <img src="./resources/images/review6.png" alt="Review 6">
+            <img src="./resources/images/review7.png" alt="Review 7">
+            <img src="./resources/images/review8.png" alt="Review 8">
+            <img src="./resources/images/review9.png" alt="Review 9">
+        </div>
+    </div>
+
+    <div id="contact_section">
+        <h2>I Look Forward to Hearing From You!</h2>
+        <p>Please contact me over one of the following channels of communication:</p>
+    
+        <div id="contact_methods">
+            <div class="contact_item">
+                <img src="./resources/images/whatsapp.png" alt="WhatsApp Logo" class="whatsapp_logo">
+                <p>WhatsApp: +1 516 728 1874</p>
+            </div>
+    
+            <div class="contact_item">
+                <img src="./resources/images/wechat.png" alt="WeChat Logo" class="wechat_logo">
+                <p>WeChat: ConnorV</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
